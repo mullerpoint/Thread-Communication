@@ -99,7 +99,7 @@ void* threadProgram(void * nothing)
 	printf("\tSecond thread: I'm about to spin until main enters a non-zero value into the flag\n");
 
 	//spin until the flag changes
-	while(FLAG != 0);
+	while(FLAG == 0);
 
 	//print result of flag change
 	printf("Second thread: Main set the flag to %d; I'll set it back to zero and then I'm done.", FLAG);
