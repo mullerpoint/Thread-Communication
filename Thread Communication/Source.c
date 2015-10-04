@@ -62,7 +62,7 @@ void* main(int argv, char* argc[])
 		//prompt user for input of a non-zero integer
 		printf("Main: Enter a non-zero integer so that the other thread can get out of its spin loop:\n");
 
-
+		//constantly check for user input, and make sure that the user is not trying to change it to zero again
 		do
 		{
 			scanf("%d", &FLAG);
@@ -102,7 +102,8 @@ void* threadProgram(void * nothing)
 	while(FLAG == 0);
 
 	//print result of flag change
-	printf("Second thread: Main set the flag to %d; I'll set it back to zero and then I'm done.", FLAG);
+	printf("\tSecond thread: Main set the flag to %d; I'll set it back to zero and then I'm done.\n", FLAG);
 
+	//set flag back to zero
 	FLAG = 0;
 }
