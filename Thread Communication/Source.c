@@ -65,7 +65,7 @@ void* main(int argv, char* argc[])
 
 		do
 		{
-			scanf(FLAG, "%d");
+			scanf("%d", &FLAG);
 		} while (FLAG == 0);
 		
 		while (FLAG != 0);
