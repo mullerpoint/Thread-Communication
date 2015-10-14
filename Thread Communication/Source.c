@@ -80,7 +80,7 @@ void* main(int argv, char* argc[])
 
 	/*Make sure the thread 2 has finished before getting to the end of main
 	and killing the thread before it gets to execute*/
-	pthread_join(tid, NULL);
+	//pthread_join(tid, NULL);
 
 	// final print out to end program
 	printf("Main: Second thread has re-zeroed the flag, so I'm done.\n");
